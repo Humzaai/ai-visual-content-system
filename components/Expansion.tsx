@@ -4,15 +4,15 @@ import { Plus, ArrowRight, PenTool, Cpu, Lightbulb, X as XIcon, Check } from "lu
 import { Section, Reveal, Heading, Lead, Eyebrow, MonoTag } from "./ui";
 
 const modules = [
-  { name: "Newsletter Engine", price: "$1,000" },
-  { name: "LinkedIn System", price: "$750" },
-  { name: "Instagram System", price: "$1,000" },
-  { name: "YouTube Thumbnail System", price: "$750" },
-  { name: "Repurposing Engine", price: "$1,500" },
-  { name: "Research / Data System", price: "$750" },
-  { name: "Launch Campaign System", price: "$1,000" },
-  { name: "New Content Pillar", price: "$500" },
-  { name: "Monthly Creative Partnership", price: "$1,000/mo" },
+  "Newsletter Engine",
+  "LinkedIn System",
+  "Instagram System",
+  "YouTube Thumbnail System",
+  "Repurposing Engine",
+  "Research / Data System",
+  "Launch Campaign System",
+  "New Content Pillar",
+  "Monthly Creative Partnership",
 ];
 
 const compound = [
@@ -94,7 +94,7 @@ export default function Expansion() {
             <ul className="grid sm:grid-cols-2 lg:grid-cols-3">
               {modules.map((m) => (
                 <li
-                  key={m.name}
+                  key={m}
                   className="group flex items-center justify-between gap-4 border-b border-line px-7 py-5 transition-colors hover:bg-panel sm:border-r"
                 >
                   <span className="flex items-center gap-3.5">
@@ -102,12 +102,30 @@ export default function Expansion() {
                       className="h-4.5 w-4.5 shrink-0 rounded-[0.3rem] border border-line-2 transition-colors group-hover:border-accent group-hover:bg-glow"
                       aria-hidden="true"
                     />
-                    <span className="text-[0.9375rem] font-medium text-cream">{m.name}</span>
+                    <span className="text-[0.9375rem] font-medium text-cream">{m}</span>
                   </span>
-                  <span className="font-mono text-sm text-accent">{m.price}</span>
+                  <Plus
+                    size={15}
+                    className="shrink-0 text-dim transition-colors group-hover:text-accent"
+                    aria-hidden="true"
+                  />
                 </li>
               ))}
             </ul>
+            <div className="flex flex-col items-start justify-between gap-3 border-t border-line bg-panel/60 px-7 py-5 sm:flex-row sm:items-center">
+              <p className="text-sm text-mist">
+                Every module is scoped to your system. Curious about one? Ask on
+                the demo call.
+              </p>
+              <a
+                href="https://calendly.com/hey-humza-ai/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-full border border-accent/50 px-5 text-sm font-semibold text-accent transition-all duration-300 hover:border-accent hover:bg-accent hover:text-white hover:shadow-[0_0_32px_rgba(124,134,255,0.45)]"
+              >
+                Book the call
+              </a>
+            </div>
           </div>
         </Reveal>
 
