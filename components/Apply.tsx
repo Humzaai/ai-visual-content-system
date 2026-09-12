@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, CheckCircle2, Clock, FileSearch, Phone } from "lucide-react";
+import { ArrowRight, CalendarCheck, CheckCircle2, Clock, FileSearch, Phone } from "lucide-react";
 import { Section, Reveal, Heading, Lead, Eyebrow } from "./ui";
 
 const APPLY_EMAIL = "aitustmail@gmail.com";
+const CALENDLY_URL = "https://calendly.com/hey-humza-ai/30min";
 
 const steps = [
   {
@@ -15,7 +16,7 @@ const steps = [
   {
     icon: Phone,
     title: "Short call",
-    copy: "We map what your system should include. No pitch deck, just the plan.",
+    copy: "Book it directly below. We map what your system should include. No pitch deck, just the plan.",
   },
   {
     icon: Clock,
@@ -77,6 +78,21 @@ export default function Apply() {
             exactly where the system can take it.
           </Lead>
 
+          <div className="mt-8 flex flex-col items-start gap-3">
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-glow inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 text-base font-semibold text-white transition-all duration-300 hover:scale-[1.03] hover:brightness-110"
+            >
+              <CalendarCheck size={17} aria-hidden="true" />
+              Book a 30-minute demo call
+            </a>
+            <p className="text-sm text-dim">
+              Fastest path. Or send the application and we reply within 48 hours.
+            </p>
+          </div>
+
           <ol className="mt-10 flex flex-col gap-6">
             {steps.map((s, i) => (
               <li key={s.title} className="flex gap-4">
@@ -116,10 +132,19 @@ export default function Apply() {
                   Your email app just opened with everything filled in. Hit send
                   and we will get back to you within 48 hours.
                 </p>
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-2 px-7 text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.03] hover:brightness-110"
+                >
+                  <CalendarCheck size={15} aria-hidden="true" />
+                  Skip the wait, book the call now
+                </a>
                 <button
                   type="button"
                   onClick={() => setSent(false)}
-                  className="mt-6 text-sm text-accent underline-offset-4 hover:underline"
+                  className="mt-4 text-sm text-accent underline-offset-4 hover:underline"
                 >
                   Edit my answers
                 </button>

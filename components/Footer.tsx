@@ -5,6 +5,7 @@ const links = [
   { label: "What’s Included", href: "#included" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
+  { label: "Book a Call", href: "https://calendly.com/hey-humza-ai/30min" },
 ];
 
 export default function Footer() {
