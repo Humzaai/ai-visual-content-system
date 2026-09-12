@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { ButtonPrimary, ButtonSecondary } from "./ui";
@@ -43,6 +44,33 @@ function FanLines({ count, flip = false }: { count: number; flip?: boolean }) {
       ))}
     </svg>
   );
+}
+
+function CountUp({ to, delay = 0 }: { to: number; delay?: number }) {
+  const [val, setVal] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVal(to);
+      return;
+    }
+    let raf = 0;
+    const duration = 1400;
+    let start: number | null = null;
+    const tick = (now: number) => {
+      if (start === null) start = now;
+      const t = Math.min((now - start - delay * 1000) / duration, 1);
+      if (t >= 0) {
+        const eased = 1 - Math.pow(1 - t, 4);
+        setVal(Math.round(eased * to));
+      }
+      if (t < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [to, delay]);
+
+  return <>{val}</>;
 }
 
 export default function Hero() {
@@ -136,13 +164,18 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.75 }}
           >
             {[
-              ["20+", "motion formats"],
-              ["3 to 7", "days to your full system"],
-              ["1", "system, yours forever"],
-            ].map(([n, label]) => (
-              <div key={label} className="px-5 text-center sm:px-8">
+              [<span key="n1"><CountUp to={20} delay={0.75} />+</span>, "motion formats"],
+              [
+                <span key="n2">
+                  <CountUp to={3} delay={0.9} /> to <CountUp to={7} delay={0.9} />
+                </span>,
+                "days to your full system",
+              ],
+              [<CountUp key="n3" to={1} delay={1.05} />, "system, yours forever"],
+            ].map(([n, label], i) => (
+              <div key={i} className="px-5 text-center sm:px-8">
                 <p
-                  className="text-2xl font-medium text-cream sm:text-3xl"
+                  className="text-2xl font-medium text-cream tabular-nums sm:text-3xl"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {n}
