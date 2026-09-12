@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, CalendarCheck, CheckCircle2, Clock, FileSearch, Phone } from "lucide-react";
+import { ArrowRight, CalendarCheck, CheckCircle2, FileSearch, HardDrive, Phone, Sparkles } from "lucide-react";
 import { Section, Reveal, Heading, Lead, Eyebrow } from "./ui";
 
 const APPLY_EMAIL = "aitustmail@gmail.com";
@@ -15,13 +15,18 @@ const steps = [
   },
   {
     icon: Phone,
-    title: "Short call",
-    copy: "Book it directly below. We map what your system should include. No pitch deck, just the plan.",
+    title: "Short call + proposal",
+    copy: "Book it directly below. We map what your system should include. Fixed scope, fixed price.",
   },
   {
-    icon: Clock,
-    title: "Proposal + build slot",
-    copy: "Fixed scope, fixed price, a start date. You decide from there.",
+    icon: Sparkles,
+    title: "You get samples first",
+    copy: "A few sample visuals built from your brand, from our end, so you see the system working before the full build.",
+  },
+  {
+    icon: HardDrive,
+    title: "Full system in 3 to 7 days",
+    copy: "Your complete working system, running locally on your computer. The files are yours forever. Use it anywhere in the world.",
   },
 ];
 

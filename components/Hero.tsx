@@ -109,14 +109,25 @@ export default function Hero() {
             </ButtonSecondary>
           </motion.div>
 
-          <motion.p
-            className="mt-6 font-mono text-xs font-medium tracking-[0.18em] text-dim uppercase"
+          <motion.div
+            className="mt-7 flex flex-wrap items-center justify-center gap-2.5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.6 }}
           >
-            Built around your brand. Owned by you. Designed to evolve.
-          </motion.p>
+            {[
+              "Runs locally on your computer",
+              "The files are yours, forever",
+              "Use it anywhere in the world",
+            ].map((b) => (
+              <span
+                key={b}
+                className="rounded-full border border-accent/30 bg-glow/40 px-4 py-1.5 font-mono text-[0.6875rem] font-semibold tracking-[0.1em] text-cream uppercase"
+              >
+                {b}
+              </span>
+            ))}
+          </motion.div>
 
           <motion.div
             className="mx-auto mt-10 flex max-w-2xl items-center justify-center divide-x divide-line"
@@ -126,7 +137,7 @@ export default function Hero() {
           >
             {[
               ["20+", "motion formats"],
-              ["5", "platforms"],
+              ["3 to 7", "days to your full system"],
               ["1", "system, yours forever"],
             ].map(([n, label]) => (
               <div key={label} className="px-5 text-center sm:px-8">
