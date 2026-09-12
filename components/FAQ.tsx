@@ -23,6 +23,18 @@ const faqs = [
     a: "Yes. The core system is yours to use indefinitely.",
   },
   {
+    q: "How do you build the whole system?",
+    a: "We audit your brand and content, define the architecture with you on the call, and send sample visuals first. Then we build. The full working system lands on your computer within 3 to 7 days.",
+  },
+  {
+    q: "What do I get inside the system?",
+    a: "A complete project folder: your brand rules encoded as files, the layout library, AI prompt and workflow files, hook, title and CTA libraries, quality checks, full documentation and a step-by-step user guide. Every visual it produces exports as GIF, PNG, 2K PNG, MP4 and a living design-notes file.",
+  },
+  {
+    q: "How do you deliver the system to me?",
+    a: "Through a private GitHub repository transferred to your account, so the files and full history are permanently yours. You clone it once to your computer and it runs locally, anywhere in the world. We walk you through the setup live during training, and if you prefer a plain folder handoff instead, we do that too.",
+  },
+  {
     q: "Do I have to pay monthly?",
     a: "No. The System Build is a one-time implementation. The monthly plans are for clients who want continued expansion, optimization and creative involvement.",
   },
@@ -48,7 +60,7 @@ const faqs = [
   },
   {
     q: "How long does the build take?",
-    a: "Timeline depends on scope and complexity. We begin with an audit and architecture phase before implementation.",
+    a: "The core system is typically ready in 3 to 7 days after the call. You see sample visuals from your brand before the full build starts.",
   },
   {
     q: "Is this replacing my designer?",
