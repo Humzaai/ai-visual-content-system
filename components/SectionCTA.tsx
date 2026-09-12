@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { type ReactNode } from "react";
 import { Reveal } from "./ui";
 
 export default function SectionCTA({
@@ -8,7 +9,7 @@ export default function SectionCTA({
   button,
   sub,
 }: {
-  message: string;
+  message: ReactNode;
   button: string;
   sub?: string;
 }) {

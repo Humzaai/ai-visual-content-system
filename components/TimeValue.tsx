@@ -26,7 +26,7 @@ function Slider({
     <div>
       <div className="flex items-baseline justify-between">
         <label className="text-sm text-mist">{label}</label>
-        <span className="font-mono text-sm text-cream">
+        <span className="font-mono text-sm font-semibold text-accent">
           {value}
           <span className="ml-1 text-xs text-dim">{unit}</span>
         </span>
@@ -104,7 +104,7 @@ export default function TimeValue() {
 
         {/* calculator */}
         <Reveal delay={0.12} className="lg:col-span-3">
-          <div className="h-full rounded-xl border border-line bg-panel/60 p-7">
+          <div className="h-full rounded-xl border border-accent/30 bg-panel/60 p-7 shadow-[0_0_50px_rgba(124,134,255,0.1)]">
             <MonoTag className="text-accent">Production Calculator</MonoTag>
             <div className="mt-6 grid gap-7 md:grid-cols-2 md:gap-10">
               <div className="flex flex-col gap-6">
@@ -136,22 +136,22 @@ export default function TimeValue() {
                   onChange={setRate}
                 />
               </div>
-              <div className="flex flex-col justify-center gap-5 rounded-lg border border-line bg-ink-2 p-6">
+              <div className="flex flex-col justify-center gap-5 rounded-lg border border-accent/40 bg-glow/40 p-6">
                 <div>
                   <MonoTag>Monthly production time</MonoTag>
-                  <p className="mt-1 text-2xl font-medium text-cream" style={{ fontFamily: "var(--font-display)" }}>
+                  <p className="mt-1 bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-2xl font-medium text-transparent" style={{ fontFamily: "var(--font-display)" }}>
                     ~{monthlyHours} hours
                   </p>
                 </div>
                 <div>
                   <MonoTag>Monthly design cost</MonoTag>
-                  <p className="mt-1 text-2xl font-medium text-cream" style={{ fontFamily: "var(--font-display)" }}>
+                  <p className="mt-1 bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-2xl font-medium text-transparent" style={{ fontFamily: "var(--font-display)" }}>
                     ~${monthlyCost.toLocaleString()}
                   </p>
                 </div>
                 <div>
                   <MonoTag className="text-accent">Potential time saved</MonoTag>
-                  <p className="mt-1 text-2xl font-medium text-accent" style={{ fontFamily: "var(--font-display)" }}>
+                  <p className="mt-1 bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-3xl font-semibold text-transparent" style={{ fontFamily: "var(--font-display)" }}>
                     ~{savedHours} hours / mo
                   </p>
                 </div>
@@ -165,7 +165,14 @@ export default function TimeValue() {
       </div>
 
       <SectionCTA
-        message={`That is roughly ${monthlyHours} hours and $${monthlyCost.toLocaleString()} going into production every month.`}
+        message={
+          <>
+            That is roughly{" "}
+            <span className="text-accent">{monthlyHours} hours</span> and{" "}
+            <span className="text-accent">${monthlyCost.toLocaleString()}</span>{" "}
+            going into production every month.
+          </>
+        }
         sub="The system build pays for itself fast when you publish consistently."
         button="Get my time back"
       />
