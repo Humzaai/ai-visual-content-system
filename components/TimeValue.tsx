@@ -73,7 +73,7 @@ export default function TimeValue() {
         {/* comparison */}
         <Reveal className="lg:col-span-2">
           <div className="flex h-full flex-col gap-4">
-            <div className="rounded-xl border border-line bg-ink-2 p-6">
+            <div className="elev rounded-xl border border-line bg-ink-2 p-6">
               <MonoTag>Traditional</MonoTag>
               <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2">
                 {["Brief", "Design", "Feedback", "Revision", "Export"].map((s, i, arr) => (
@@ -86,7 +86,7 @@ export default function TimeValue() {
                 ))}
               </div>
             </div>
-            <div className="rounded-xl border border-accent/30 bg-ink-2 p-6">
+            <div className="elev rounded-xl border border-accent/30 bg-ink-2 p-6">
               <MonoTag className="text-accent">System</MonoTag>
               <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2">
                 {["Content", "Select system", "Generate", "Review", "Publish"].map((s, i, arr) => (
@@ -104,7 +104,7 @@ export default function TimeValue() {
 
         {/* calculator */}
         <Reveal delay={0.12} className="lg:col-span-3">
-          <div className="h-full rounded-xl border border-accent/30 bg-panel/60 p-7 shadow-[0_0_50px_rgba(124,134,255,0.1)]">
+          <div className="elev h-full rounded-xl border border-accent/30 bg-panel/60 p-7 shadow-[0_0_50px_rgba(124,134,255,0.1)]">
             <MonoTag className="text-accent">Production Calculator</MonoTag>
             <div className="mt-6 grid gap-7 md:grid-cols-2 md:gap-10">
               <div className="flex flex-col gap-6">

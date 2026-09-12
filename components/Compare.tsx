@@ -78,7 +78,7 @@ export default function Compare() {
                     className={`px-4 pb-4 text-center align-bottom ${i === 0 ? "min-w-44" : "min-w-32"}`}
                   >
                     <span
-                      className={`inline-block rounded-xl border px-4 py-3 text-sm font-semibold tracking-tight ${
+                      className={`elev inline-block rounded-xl border px-4 py-3 text-sm font-semibold tracking-tight ${
                         i === 0
                           ? "border-accent/60 bg-cream text-ink shadow-[0_0_40px_rgba(124,134,255,0.18)]"
                           : "border-line bg-panel text-mist"

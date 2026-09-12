@@ -36,7 +36,7 @@ export default function Partnership() {
               During the initial build, we work directly with you to understand
               how you think, what you publish and how your brand should look.
             </Lead>
-            <div className="mt-8 rounded-xl border border-accent/25 bg-glow/40 p-6">
+            <div className="elev mt-8 rounded-xl border border-accent/25 bg-glow/40 p-6">
               <MonoTag className="text-accent">Your Creative Systems Partner</MonoTag>
               <p className="mt-3 text-sm leading-relaxed text-mist">
                 Not a designer. Not a freelancer. Not maintenance. Your ongoing
@@ -84,7 +84,7 @@ export default function Partnership() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mx-auto mt-10 max-w-2xl rounded-xl border border-line bg-ink-2 p-7 text-center">
+          <div className="elev mx-auto mt-10 max-w-2xl rounded-xl border border-line bg-ink-2 p-7 text-center">
             <p className="text-sm leading-loose text-mist">
               AI models change. Platforms change. Formats change.
               <br />
@@ -99,7 +99,7 @@ export default function Partnership() {
         <div className="mx-auto mt-10 flex max-w-md flex-col items-stretch">
           {model.map((m, i) => (
             <Reveal key={m.title} delay={0.15 + i * 0.08}>
-              <div className="rounded-xl border border-line bg-panel/60 p-6 text-center transition-colors hover:border-accent/40">
+              <div className="elev rounded-xl border border-line bg-panel/60 p-6 text-center transition-colors hover:border-accent/40">
                 <h3
                   className="text-lg font-semibold tracking-tight text-cream"
                   style={{ fontFamily: "var(--font-display)" }}

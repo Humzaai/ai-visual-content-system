@@ -190,7 +190,7 @@ export default function Hero() {
 
         {/* system map */}
         <motion.div
-          className="relative mt-16 rounded-2xl border border-line bg-ink-2/80 p-5 backdrop-blur-sm sm:p-8 md:mt-24"
+          className="elev relative mt-16 rounded-2xl border border-line bg-ink-2/80 p-5 backdrop-blur-sm sm:p-8 md:mt-24"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -229,7 +229,7 @@ export default function Hero() {
 
             {/* core */}
             <div className="flex justify-center">
-              <div className="node-pulse rounded-xl border border-accent/50 bg-glow px-8 py-6 text-center">
+              <div className="elev node-pulse rounded-xl border border-accent/50 bg-glow px-8 py-6 text-center">
                 <p className="font-mono text-[0.6875rem] font-semibold tracking-[0.22em] text-accent uppercase">
                   Core
                 </p>

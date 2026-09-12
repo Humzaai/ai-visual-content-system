@@ -130,7 +130,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`rounded-xl border border-line bg-panel/70 p-6 transition-colors duration-300 hover:border-line-2 ${className}`}
+      className={`elev rounded-xl border border-line bg-panel/70 p-6 transition-colors duration-300 hover:border-line-2 ${className}`}
     >
       {children}
     </div>

@@ -26,7 +26,7 @@ export default function Workflow() {
       <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {steps.map((s, i) => (
           <Reveal key={s.n} delay={i * 0.06}>
-            <div className="flex h-full items-start gap-4 rounded-xl border border-line bg-panel/60 p-6 transition-colors hover:border-accent/40">
+            <div className="elev flex h-full items-start gap-4 rounded-xl border border-line bg-panel/60 p-6 transition-colors hover:border-accent/40">
               <span
                 className="font-mono text-xl font-medium text-accent/80"
                 style={{ fontFamily: "var(--font-mono)" }}

@@ -26,7 +26,7 @@ export default function Demo() {
       </Reveal>
 
       <Reveal delay={0.12}>
-        <div className="relative mx-auto mt-14 max-w-5xl overflow-hidden rounded-2xl border border-line bg-ink-2 shadow-[0_32px_80px_rgba(0,0,0,0.5)]">
+        <div className="elev relative mx-auto mt-14 max-w-5xl overflow-hidden rounded-2xl border border-line bg-ink-2 shadow-[0_32px_80px_rgba(0,0,0,0.5)]">
           <div className="flex items-center gap-1.5 border-b border-line bg-panel px-5 py-3.5">
             <span className="h-2.5 w-2.5 rounded-full bg-cream/15" />
             <span className="h-2.5 w-2.5 rounded-full bg-cream/15" />

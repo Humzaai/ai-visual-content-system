@@ -122,7 +122,7 @@ export default function Apply() {
         <Reveal delay={0.12}>
           <form
             onSubmit={submit}
-            className="rounded-2xl border border-accent/30 bg-ink-2 p-7 shadow-[0_0_60px_rgba(124,134,255,0.12)] sm:p-8"
+            className="elev rounded-2xl border border-accent/30 bg-ink-2 p-7 shadow-[0_0_60px_rgba(124,134,255,0.12)] sm:p-8"
           >
             {sent ? (
               <div className="flex min-h-96 flex-col items-center justify-center text-center">

@@ -81,7 +81,7 @@ export default function Expansion() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-12 overflow-hidden rounded-2xl border border-line bg-ink-2">
+          <div className="elev mt-12 overflow-hidden rounded-2xl border border-line bg-ink-2">
             <div className="flex items-center justify-between border-b border-line bg-panel px-7 py-5">
               <p
                 className="text-lg font-semibold tracking-tight text-cream"
@@ -130,7 +130,7 @@ export default function Expansion() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="mt-16 rounded-xl border border-line bg-panel/60 p-7 sm:p-9">
+          <div className="elev mt-16 rounded-xl border border-line bg-panel/60 p-7 sm:p-9">
             <MonoTag className="text-accent">Long-Term Value</MonoTag>
             <h3
               className="mt-3 text-2xl font-medium tracking-tight text-cream"
@@ -169,7 +169,7 @@ export default function Expansion() {
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.08}>
-              <div className="h-full rounded-xl border border-line bg-panel/60 p-7">
+              <div className="elev h-full rounded-xl border border-line bg-panel/60 p-7">
                 <p.icon size={18} className="text-accent" aria-hidden="true" />
                 <h3 className="mt-4 font-mono text-xs tracking-[0.18em] text-cream uppercase">
                   {p.title}

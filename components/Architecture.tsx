@@ -78,7 +78,7 @@ export default function Architecture() {
       </Reveal>
 
       <Reveal delay={0.12}>
-        <div className="mt-14 overflow-hidden rounded-2xl border border-line bg-ink-2">
+        <div className="elev mt-14 overflow-hidden rounded-2xl border border-line bg-ink-2">
           {/* window chrome */}
           <div className="flex items-center justify-between border-b border-line bg-panel px-5 py-3.5">
             <div className="flex items-center gap-1.5">

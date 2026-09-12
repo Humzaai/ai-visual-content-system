@@ -110,7 +110,7 @@ export default function Pricing() {
         {tiers.map((t, i) => (
           <Reveal key={t.name} delay={i * 0.08} className="h-full">
             <div
-              className={`flex h-full flex-col overflow-hidden rounded-2xl border ${
+              className={`elev flex h-full flex-col overflow-hidden rounded-2xl border ${
                 t.featured
                   ? "border-accent shadow-[0_0_90px_rgba(124,134,255,0.3)]"
                   : "border-line transition-shadow duration-300 hover:border-accent/50 hover:shadow-[0_0_50px_rgba(124,134,255,0.15)]"
@@ -205,7 +205,7 @@ export default function Pricing() {
       </div>
 
       <Reveal delay={0.15}>
-        <div className="mx-auto mt-14 max-w-3xl rounded-2xl border border-accent/50 bg-glow/70 p-9 text-center shadow-[0_0_60px_rgba(124,134,255,0.15)]">
+        <div className="elev mx-auto mt-14 max-w-3xl rounded-2xl border border-accent/50 bg-glow/70 p-9 text-center shadow-[0_0_60px_rgba(124,134,255,0.15)]">
           <p
             className="text-2xl font-medium text-cream sm:text-3xl"
             style={{ fontFamily: "var(--font-display)" }}

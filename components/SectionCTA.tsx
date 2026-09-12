@@ -15,7 +15,7 @@ export default function SectionCTA({
 }) {
   return (
     <Reveal delay={0.1}>
-      <div className="mt-14 flex flex-col items-center justify-between gap-5 rounded-2xl border border-accent/30 bg-glow/40 px-7 py-7 sm:flex-row sm:px-9">
+      <div className="elev mt-14 flex flex-col items-center justify-between gap-5 rounded-2xl border border-accent/30 bg-glow/40 px-7 py-7 sm:flex-row sm:px-9">
         <div className="text-center sm:text-left">
           <p
             className="text-lg font-medium text-cream sm:text-xl"

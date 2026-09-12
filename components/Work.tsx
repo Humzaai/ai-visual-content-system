@@ -50,7 +50,7 @@ function MotionCard({ src, label }: { src: string; label: string }) {
   }, []);
 
   return (
-    <figure className="group w-70 shrink-0 overflow-hidden rounded-xl border border-line bg-panel/60 transition-colors duration-300 hover:border-accent/50 sm:w-80">
+    <figure className="elev group w-70 shrink-0 overflow-hidden rounded-xl border border-line bg-panel/60 transition-colors duration-300 hover:border-accent/50 sm:w-80">
       <div className="relative aspect-[4/5] overflow-hidden">
         <video
           ref={ref}

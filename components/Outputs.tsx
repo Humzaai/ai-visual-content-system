@@ -60,7 +60,7 @@ export default function Outputs() {
       </Reveal>
 
       <Reveal delay={0.12}>
-        <div className="mt-14 overflow-hidden rounded-2xl border border-line bg-ink-2">
+        <div className="elev mt-14 overflow-hidden rounded-2xl border border-line bg-ink-2">
           <div className="flex items-center gap-2.5 border-b border-line bg-panel px-6 py-4">
             <FolderOpen size={15} className="text-accent" aria-hidden="true" />
             <span className="font-mono text-xs font-medium tracking-[0.18em] text-mist uppercase">
