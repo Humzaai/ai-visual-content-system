@@ -83,11 +83,13 @@ git push
 
 ## 7. Updates from us (partnership clients)
 
-If you are on the monthly partnership, we ship improvements to your repository: new layouts, new pillars, prompt upgrades, workflow fixes. Getting them is one command:
+If you are on the monthly partnership, we ship improvements to your repository: new layouts, new pillars, prompt upgrades, workflow fixes. You get them three ways, pick your favorite:
 
-```bash
-git pull
-```
+1. **Automatic**: your system pulls the latest version every time you open the project. Nothing to do.
+2. **One click**: double-click `update.command` (Mac) or `update.bat` (Windows) in the project folder.
+3. **Manual**: run `git pull` in the project folder.
+
+You also get a GitHub email whenever we publish an update, with notes on what is new.
 
 Each update is tagged (v1.1, v1.2, ...) with release notes, so you can always see what changed and roll back if you ever want to.
 

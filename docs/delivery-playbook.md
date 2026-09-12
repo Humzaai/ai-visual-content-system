@@ -53,6 +53,52 @@ Client has no GitHub account? They create a free one in 2 minutes on the trainin
 - Show the design-notes loop and the commit/push habit.
 - Show `git pull` for receiving partnership updates.
 
+## 4b. Make updates automatic (ship with every repo)
+
+Client folders do not update themselves; git is pull-based. Close the gap with both of these:
+
+**One-click updater** — add to the repo root:
+
+`update.command` (Mac, run `chmod +x update.command`):
+```bash
+#!/bin/bash
+cd "$(dirname "$0")"
+git stash --include-untracked --quiet
+git pull --rebase
+git stash pop --quiet 2>/dev/null
+echo "System updated. Latest changes:" && git log -3 --oneline
+read -p "Press enter to close"
+```
+
+`update.bat` (Windows):
+```bat
+@echo off
+cd /d %~dp0
+git stash --include-untracked --quiet
+git pull --rebase
+git stash pop --quiet 2>nul
+echo System updated.
+git log -3 --oneline
+pause
+```
+
+**Auto-pull on session start** — in the client repo's `.claude/settings.json`, add a SessionStart hook so the system updates itself every time they open the project in Claude Code:
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "git pull --rebase --autostash --quiet || true" }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**Conflict rule that makes this safe:** we only modify `layouts/`, `prompts/`, `workflows/`, `pillars/`. The client only adds to `exports/` and appends to `design-notes.md`. Partnership updates never rewrite design-notes, only append. Different files, no collisions.
+
 ## 5. Ongoing (partnership clients)
 
 - Work on branches, merge to `main`, tag every drop: `v1.1`, `v1.2`...
@@ -65,6 +111,8 @@ Client has no GitHub account? They create a free one in 2 minutes on the trainin
 - [ ] Fresh clone test on a machine that is not ours
 - [ ] LFS tracking verified (`git lfs ls-files`)
 - [ ] v1.0 tag pushed
+- [ ] update.command / update.bat included and tested
+- [ ] SessionStart auto-pull hook in .claude/settings.json
 - [ ] Ownership transferred (or collaborator added + transfer date agreed)
 - [ ] Training call done, client produced one visual themselves
 - [ ] 30-day support window start date noted
