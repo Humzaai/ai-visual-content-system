@@ -8,17 +8,14 @@ import Architecture from "@/components/Architecture";
 import Outputs from "@/components/Outputs";
 import Demo from "@/components/Demo";
 import Work from "@/components/Work";
-import Repurposing from "@/components/Repurposing";
 import Workflow from "@/components/Workflow";
 import TimeValue from "@/components/TimeValue";
 import Compare from "@/components/Compare";
-import Journey from "@/components/Journey";
 import Pricing from "@/components/Pricing";
 import Partnership from "@/components/Partnership";
 import Expansion from "@/components/Expansion";
 import FAQ from "@/components/FAQ";
 import Apply from "@/components/Apply";
-import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
 
@@ -36,17 +33,13 @@ export default function Home() {
       <Outputs />
       <Demo />
       <Work />
-      <Repurposing />
       <Workflow />
       <Compare />
-      <Journey />
       <Pricing />
       <Partnership />
       <Expansion />
       <FAQ />
       <Apply />
-      <MarqueeStrip />
-      <FinalCTA />
       <Footer />
       <StickyCTA />
     </main>

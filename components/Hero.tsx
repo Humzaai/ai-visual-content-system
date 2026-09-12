@@ -94,15 +94,6 @@ export default function Hero() {
             system you can run yourself.
           </motion.p>
 
-          <motion.p
-            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-dim"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-          >
-            Your layouts, content pillars, brand rules, CTAs and AI workflows all
-            live inside one repeatable system.
-          </motion.p>
 
           <motion.div
             className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"

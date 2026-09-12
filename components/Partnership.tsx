@@ -4,16 +4,17 @@ import { ArrowDown } from "lucide-react";
 import { Section, Reveal, Heading, Lead, Eyebrow, MonoTag } from "./ui";
 
 const involvement = [
-  { title: "Discovery", copy: "We study your brand, content and existing system." },
-  { title: "Architecture", copy: "We personally help define the visual architecture." },
   {
-    title: "Build",
-    copy: "Our team handles implementation while the creative system is overseen from the top.",
+    title: "Discovery + Architecture",
+    copy: "We study your brand, content and existing system, then define the visual architecture with you.",
   },
-  { title: "Training", copy: "We personally walk you through how to operate the system." },
+  {
+    title: "Build + Training",
+    copy: "Our team implements while we oversee the creative direction, then we personally train you to run it.",
+  },
   {
     title: "Evolution",
-    copy: "If you continue with the partnership, we remain involved in improving the system with you.",
+    copy: "If you continue with the partnership, we stay involved in improving the system with you.",
   },
 ];
 

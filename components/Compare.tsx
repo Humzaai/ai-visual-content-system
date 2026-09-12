@@ -2,7 +2,6 @@
 
 import { Check, X } from "lucide-react";
 import { Section, Reveal, Heading, Eyebrow } from "./ui";
-import SectionCTA from "./SectionCTA";
 
 type Cell = boolean | string;
 
@@ -118,11 +117,6 @@ export default function Compare() {
         </div>
       </Reveal>
 
-      <SectionCTA
-        message="One build covers everything in that first column."
-        sub="Owned by you, with or without the monthly partnership."
-        button="See pricing"
-      />
     </Section>
   );
 }

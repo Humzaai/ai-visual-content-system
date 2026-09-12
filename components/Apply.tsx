@@ -68,12 +68,13 @@ export default function Apply() {
         <Reveal>
           <Eyebrow>Start Here</Eyebrow>
           <Heading>
-            Tell us what
+            Stop rebuilding the same
             <br />
-            you already built.
+            visual every week.
           </Heading>
           <Lead>
-            Two minutes. We will show you exactly where the system can take it.
+            Tell us what you already built. Two minutes, and we will show you
+            exactly where the system can take it.
           </Lead>
 
           <ol className="mt-10 flex flex-col gap-6">
@@ -91,6 +92,10 @@ export default function Apply() {
               </li>
             ))}
           </ol>
+
+          <p className="mt-10 font-mono text-xs font-semibold tracking-[0.22em] text-accent uppercase">
+            Build it once. Own it forever. Keep evolving.
+          </p>
         </Reveal>
 
         <Reveal delay={0.12}>
